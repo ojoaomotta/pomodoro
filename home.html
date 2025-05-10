@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>relógio pomodoro</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
+            background-color: #fdfdfd;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .config {
+            margin-bottom: 15px;
+        }
+
+        input {
+            width: 60px;
+            padding: 5px;
+            margin: 0 5px;
+        }
+
+        .timer {
+            font-size: 3rem;
+            margin: 20px 0;
+        }
+
+        button {
+            padding: 10px;
+            margin: 0 5px;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>relógio pomodoro</h1>
+
+    <div class="config">
+        <label>trabalho: <input type="number" id="work-min" value="25"> min</label>
+        <label>pausa curta: <input type="number" id="short-break-min" value="5"> min</label>
+        <label>pausa longa: <input type="number" id="long-break-min" value="10"> min</label>
+    </div>
+
+    <div class="timer" id="timer">25:00</div>
+
+    <div>
+        <button id="start">iniciar</button>
+        <button id="pause">pausar</button>
+        <button id="reset">resetar</button>
+    </div>
+
+    <audio id="alerta">
+        <source src="https://www.soundjay.com/button/beep-07.wav" type="audio/wav">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
